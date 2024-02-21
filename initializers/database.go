@@ -4,6 +4,7 @@ import (
 	"log"
 	"os"
 
+	"github.com/kipngeno-isaac/go-order-service/models"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -18,4 +19,5 @@ func ConnectDB() {
 	if err != nil {
 		log.Fatal("Failed to connect to databse")
 	}
+	DB.AutoMigrate(&models.Customer{})
 }
