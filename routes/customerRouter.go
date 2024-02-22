@@ -6,8 +6,8 @@ import (
 )
 
 func RouteCustomer(router *gin.Engine) {
-	router.GET("/", controllers.GetCustomers)
-	router.POST("/", controllers.CreateCustomer)
-	router.GET("/:id", controllers.GetCustomer)
+	router.GET("/customers", controllers.GetCustomers)
+	router.POST("/customers", controllers.CreateCustomer)
+	router.GET("/customers/:id", controllers.GetCustomer)
 
 }
